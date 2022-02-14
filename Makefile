@@ -1,34 +1,48 @@
 ####
+#### 
 ####
 
 help:
 	@echo "Targets:"
-	@echo "           sum: Git status"
-	@echo "            ci: Check in codes"
-	@echo "         build: build everything"
-	@echo "    build-docs: Build documentations"
-	@echo "   deploy-docs: Deploy documentations to the web"
-	@echo "         clean: Remove all built files"
+	@echo "        build: build everything"
+	@echo "   build-docs: Build documentations for release"
+	@echo "    build-pkg: Build Python distribution package"
+	@echo "   serve-docs: Serve documentations for devepment"
+	@echo "  upload-test: Upload Python package to test.pypi.org"
+	@echo ""
+	@echo "          sum: Git status"
+	@echo "           ci: Check in codes"
+	@echo "        clean: Remove built files"
+
 
 serve-docs:
-	cd docs; pipenv run mkdocs serve -a localhost:12002
+	cd docs; mkdocs serve -a localhost:12001
 
 build-docs:
-	cd docs; mkdocs build -d ../src/sqlite3ftse/static/docs
+	cd docs; mkdocs build -d ../src/lsutil/static/docs
 
-deploy-docs:
-	cd docs; pipenv run mkdocs gh-deploy --force
+build-pkg:
+	@echo "// Updating build date in __init__.py"
+	@grep -v ^__built__ src/lsutil/__init__.py > src/lsutil/.tmp/__init__.py
+	@date +'__built__ = "%c %Z"' >> src/lsutil/.tmp/__init__.py
+	@cp src/lsutil/.tmp/__init__.py src/lsutil/__init__.py
+	@python3 -m build
 
-
-build: build-docs
+build: build-docs build-pkg
 
 sum:
 	git status
 
+upload-test:
+	python3 -m twine upload --verbose --repository testpypi dist/*
+upload-pypi:
+	python3 -m twine upload --verbose dist/*
+
+all: clean build upload-test
+
 ci:
-	@echo "// Bring repo up-to-date and push changes to repo"
 	git pull; git commit -a -mupdate; git push
 
-blue:
-	@bin/blueplates
+clean:
+	rm -rf ./dist
 
