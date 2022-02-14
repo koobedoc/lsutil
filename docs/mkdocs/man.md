@@ -8,3 +8,7 @@
 
 : use a long listing format
 
+`--all`
+
+: show entries starting with '.', except for '.' and '..'
+
