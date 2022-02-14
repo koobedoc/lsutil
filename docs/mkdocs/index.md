@@ -1,7 +1,12 @@
-# Wedipy Web editor
+# lsutil
 
-Simple plain text editor.
+Unix command line 'ls' command in a Python module.
 
+```
+import lsutil
+
+lsutil.ls()
+```
 
 ## Installation
 
