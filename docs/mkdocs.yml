@@ -1,4 +1,4 @@
-site_name: Wedipy&mdash;Web Editor In Python
+site_name: lsutil
 theme:
     name: material
 docs_dir: mkdocs
