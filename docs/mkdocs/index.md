@@ -1,4 +1,4 @@
-# lsutil
+# Introduction
 
 Unix command line 'ls' command in a Python module.
 
@@ -12,7 +12,7 @@ lsutil.ls()
 
 The package is available on `test.pypi.org`. Run the following to install the package.
 
-    pip install --index-url https://test.pypi.org/simple/ --no-deps --upgrade wedipy
+    pip install --index-url https://test.pypi.org/simple/ --no-deps --upgrade lsutil
 
 
 Notice that `--no-deps` prevents the installation of dependencies because they may not be available on
