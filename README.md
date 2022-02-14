@@ -8,4 +8,5 @@ Edit this file for your project.
     python-depends: pyyaml jinja2 rich mkdocs-material
     docs: mkdocs
     python-modules:  lsutil
+    python-packages: lsutil
 

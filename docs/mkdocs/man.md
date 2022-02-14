@@ -6,5 +6,5 @@
 
 `--long`
 
-: Directory path for storing user configurations and history. Default is "~/.local/share/wedipy".
+: use a long listing format
 

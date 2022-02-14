@@ -1,6 +1,11 @@
 # Introduction
 
-Unix command line 'ls' command in a Python module.
+This started off with the need for a simple way to list directory contents nicely and
+evolved into a learning experience.
+
+*This is a work-in-progress with very few things working.*
+
+Unix command-line 'ls' command in a Python module.
 
 ```
 import lsutil
@@ -18,8 +23,7 @@ The package is available on `test.pypi.org`. Run the following to install the pa
 Notice that `--no-deps` prevents the installation of dependencies because they may not be available on
 `test.pypi.org`. Install the dependencies separately by:
 
-
-    pip install fastapi jinja2 uvicorn
+    pip install rich
 
 
 
