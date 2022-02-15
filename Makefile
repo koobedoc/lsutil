@@ -1,6 +1,4 @@
 ####
-#### 
-####
 
 help:
 	@echo "Targets:"
@@ -35,14 +33,15 @@ sum:
 
 upload-test:
 	python3 -m twine upload --verbose --repository testpypi dist/*
+
 upload-pypi:
+	twine check dist/*
 	python3 -m twine upload --verbose dist/*
 
-all: clean build upload-test
+all: clean build upload-pypi
 
 ci:
 	git pull; git commit -a -mupdate; git push
 
 clean:
 	rm -rf ./dist
-

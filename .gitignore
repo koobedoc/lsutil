@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 .tmp/
 docs/site/
+src/*/static/docs
 
 # C extensions
 *.so

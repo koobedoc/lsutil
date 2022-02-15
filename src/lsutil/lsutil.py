@@ -31,8 +31,11 @@ class lsutil:  # pylint: disable = invalid-name
                     if entry.is_dir():
                         classify = "/"
                     if self.args.long:
-                        print(stat.filemode(entry.stat().st_mode), end=" ")
-                    print(f"{entry.name}{classify}")
+                        print(stat.filemode(entry.stat().st_mode), f"{entry.name}{classify}")
+                    else:
+                        print(f"{entry.name}{classify} ", end="")
+        if not self.args.long:
+            print()
 
     def parse_cli(self):
         """Parse Unix command line arguments"""
@@ -54,6 +57,7 @@ class lsutil:  # pylint: disable = invalid-name
 
         self.args = parser.parse_args()
         if self.args.verbose:
+            # print(f"lsutil ver. {__init__.__version__}, {__init__.__built__}")
             print(self.args)
 
     @staticmethod

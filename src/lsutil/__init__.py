@@ -1,3 +1,4 @@
 """ lsutil """
-__version__ = "0.0.7"
-__built__ = "Mon Feb 14 21:27:34 2022 +08"
+
+__version__ = "0.0.10"
+__built__ = "Mon Feb 14 23:09:27 2022 +08"
