@@ -5,7 +5,7 @@ Edit this file for your project.
 
 ## Project Information (YAML format)
 
-    python-depends: pyyaml jinja2 rich mkdocs-material
+    python-depends: pyyaml rich
     docs: mkdocs
     python-modules:  lsutil
     python-packages: lsutil
