@@ -1,11 +1,25 @@
 # Introduction
 
-This started off with the need for a simple way to list directory contents nicely and
-evolved into a learning experience.
-
-*This is a work-in-progress with very few things working.*
 
 Unix command-line 'ls' command in a Python module.
+
+
+
+* Not yet done, not yet released, no commitment to finish *
+
+The `lsutil` package and command combines the commonly used functionalities of the `ls` and `find` command
+into a single command.
+
+
+The functionality is approximately similar to
+
+
+    find <find options> -exec ls <ls options> \{\} \;
+
+
+
+
+## Python module
 
 ```
 import lsutil
