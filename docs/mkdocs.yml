@@ -1,8 +1,14 @@
 site_name: lsutil
+
 theme:
     name: material
 docs_dir: mkdocs
+
 markdown_extensions:
     - def_list
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+
 extra:
     generator: false

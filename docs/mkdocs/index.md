@@ -4,8 +4,9 @@
 Unix command-line 'ls' command in a Python module.
 
 
+!!! warning
 
-* Not yet done, not yet released, no commitment to finish *
+    Not yet done, not yet released, no commitment to finish.
 
 The `lsutil` package and command combines the commonly used functionalities of the `ls` and `find` command
 into a single command.
