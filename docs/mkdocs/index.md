@@ -1,8 +1,7 @@
 # Introduction
 
 
-Unix command-line 'ls' command in a Python module.
-
+Unix `ls` and `find` commands combined into a Python module.
 
 !!! warning
 
@@ -16,7 +15,6 @@ The functionality is approximately similar to
 
 
     find <find options> -exec ls <ls options> \{\} \;
-
 
 
 

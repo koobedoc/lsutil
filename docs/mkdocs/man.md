@@ -5,7 +5,6 @@
 ## Syntax
 
 `--long`
-
 : use a long listing format
 
 `--all`
@@ -21,7 +20,7 @@
 : use a format string to print entry. See Formatting the Output below
 
 
-## Formating the Output
+## Formatting the Output
 
 (Copied from time command, not correct for lsutil)
 
@@ -65,9 +64,6 @@ The resource specifiers, which are a superset of those recognized by the tcsh(1)
       O      Number of file system outputs by the process.
       P      Percentage of the CPU that this job got.  This is just user + system times divided by the total
              running time.  It also prints a percentage sign.
-
-
-
 
 ## See Also
    ls(1)
