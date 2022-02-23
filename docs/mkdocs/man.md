@@ -15,9 +15,16 @@
 
 : show one line per entry
 
-`--formats`:
+`--formats`
 
-: use a format string to print entry. See Formatting the Output below
+: use a format string to print entry. See Formatting the Output below.
+
+
+`--tree`:
+
+
+: show entries in a tree form.
+
 
 
 ## Formatting the Output

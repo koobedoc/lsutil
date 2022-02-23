@@ -16,7 +16,7 @@ class lsutil:  # pylint: disable = invalid-name
         self,
         pathnames: list,
         one: bool = False,
-        long: bool = False,
+        longs: bool = False,
         classify: bool = False,
         capture: list = None,
         formats: str = None,
@@ -26,12 +26,12 @@ class lsutil:  # pylint: disable = invalid-name
         if not pathnames:
             pathnames = ["."]
 
-        if formats or long:
+        if formats or longs:
             one = True
 
         if not formats:
             formats = "{entry.name}{classify}"
-            if long:
+            if longs:
                 formats = "{filemode} " + formats
 
         for name in pathnames:
@@ -54,7 +54,7 @@ class lsutil:  # pylint: disable = invalid-name
         """Parse Unix command line arguments"""
         parser = argparse.ArgumentParser(description="Process some integers.")
         parser.add_argument("files", metavar="file", nargs="*", help="Files or directories")
-        parser.add_argument("-l", "--long", action="store_true", help="use a long listing format")
+        parser.add_argument("-l", "--longs", action="store_true", help="use a long listing format")
         parser.add_argument("-v", "--verbose", action="count", default=0, help="increase verbosity for debugging")
         parser.add_argument("-1", "--one", action="count", default=0, help="increase verbosity for debugging")
         parser.add_argument("--formats", type=str, help="Format string")
@@ -69,7 +69,7 @@ class lsutil:  # pylint: disable = invalid-name
         """Unix command line interface"""
         self = lsutil()
         self.parse_cli()
-        self.ls(self.args.files, long=self.args.long, one=self.args.one, formats=self.args.formats)
+        self.ls(self.args.files, longs=self.args.longs, one=self.args.one, formats=self.args.formats)
 
 
 if __name__ == "__main__":
