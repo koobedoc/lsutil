@@ -4,6 +4,7 @@
 import stat
 import argparse
 import os
+import humanize
 
 class Lsutil:  # pylint: disable = invalid-name
     """Unix ls command in Python"""
@@ -30,19 +31,27 @@ class Lsutil:  # pylint: disable = invalid-name
             one = True
 
         if not formats:
-            formats = "{entry.name}{classify}"
+            formats = "{size:10d} {entry.name}{classify}"
             if longs:
                 formats = "{filemode} " + formats
 
         for name in pathnames:
             with os.scandir(name) as it:
                 for entry in it:
-                    classify = ""
-                    if entry.is_dir():
+                    if entry.is_file():
+                        classify = ""
+                    elif entry.is_dir():
                         classify = "/"
+                    elif entry.is_symlink():
+                        classify = "@"
+                    else:
+                        classify = "?"
+
+                    fstat = entry.stat()
+
 
                     print(
-                        formats.format(classify=classify, filemode=stat.filemode(entry.stat().st_mode), entry=entry),
+                        formats.format(size=fstat.st_size, classify=classify, filemode=stat.filemode(fstat.st_mode), entry=entry),
                         end="",
                     )
                     if one:
