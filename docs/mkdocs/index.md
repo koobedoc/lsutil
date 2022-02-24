@@ -35,6 +35,5 @@ The command `lsutil` is available as a script.
 
 ## Developments
 
-
-[https://github.com/koobedoc/lsutil](https://github.com/koobedoc/lsutil)
+*Source Code*:  [https://github.com/koobedoc/lsutil](https://github.com/koobedoc/lsutil)
 
