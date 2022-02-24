@@ -16,13 +16,12 @@ with perhaps better performance and ease of use.
 
 ## Installation
 
-The package will be available on `pypi.org`. Run the following to install the package.
+The package is available on `pypi.org`. Install the package by
 
     pip install lsutil
 
 
 ## Command line
-
 
 The command `lsutil` is available as a script.
 
@@ -32,7 +31,10 @@ The command `lsutil` is available as a script.
 
     import lsutil
 
-
     lsutil.ls()
 
+## Developments
+
+
+[https://github.com/koobedoc/lsutil](https://github.com/koobedoc/lsutil)
 

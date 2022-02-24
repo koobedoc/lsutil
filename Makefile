@@ -20,10 +20,8 @@ build-docs:
 	cd docs; mkdocs build -d ../src/lsutil/static/docs
 
 build-pkg:
-	@echo "// Updating build date in __init__.py"
-	@grep -v ^__built__ src/lsutil/__init__.py > src/lsutil/.tmp/__init__.py
-	@date +'__built__ = "%c %Z"' >> src/lsutil/.tmp/__init__.py
-	@cp src/lsutil/.tmp/__init__.py src/lsutil/__init__.py
+	@echo "// Updating version and build date in __init__.py"
+	@bin/update_version.py src/lsutil/__init__.py
 	@python3 -m build
 
 build: build-docs build-pkg

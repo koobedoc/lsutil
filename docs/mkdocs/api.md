@@ -1,9 +1,8 @@
-# Module documentation
+# API Reference
 
 
 
-
-## `lsutil.sortpaths(list)
+### `lsutil.sortpaths(list)`
 
 Sorts the list of paths
 
