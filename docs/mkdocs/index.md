@@ -4,7 +4,7 @@ Unix `ls`, `find`, and `tree` commands combined into a Python module.
 
 !!! warning
 
-    Not yet done, not yet released, no commitment to finish.
+    Not yet done (has not reached version 0.1.0), no commitment to finish.
 
 `lsutil` combines commonly used functionalities of the `ls`, `find`, and `tree` commands.
 The functionality is approximately similar to
