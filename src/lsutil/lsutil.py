@@ -5,8 +5,7 @@ import stat
 import argparse
 import os
 
-
-class lsutil:  # pylint: disable = invalid-name
+class Lsutil:  # pylint: disable = invalid-name
     """Unix ls command in Python"""
 
     def __init__(self):
@@ -20,6 +19,7 @@ class lsutil:  # pylint: disable = invalid-name
         classify: bool = False,
         capture: list = None,
         formats: str = None,
+        humanize: bool = False,
     ):  # pylint: disable=invalid-name, too-many-arguments
         """Unix ls command clone"""
         _ = self
@@ -58,6 +58,9 @@ class lsutil:  # pylint: disable = invalid-name
         parser.add_argument("-v", "--verbose", action="count", default=0, help="increase verbosity for debugging")
         parser.add_argument("-1", "--one", action="count", default=0, help="increase verbosity for debugging")
         parser.add_argument("--formats", type=str, help="Format string")
+        parser.add_argument("--stdin", action='store_true', help="accept file arguments from input")
+        parser.add_argument("--humanize", action='store_true', help="humanize output")
+        parser.add_argument("--man", action='store_true', help="display man page")
 
         self.args = parser.parse_args()
         if self.args.verbose:
@@ -67,11 +70,11 @@ class lsutil:  # pylint: disable = invalid-name
     @staticmethod
     def main_cli():
         """Unix command line interface"""
-        self = lsutil()
+        self = Lsutil()
         self.parse_cli()
         self.ls(self.args.files, longs=self.args.longs, one=self.args.one, formats=self.args.formats)
 
 
 if __name__ == "__main__":
 
-    lsutil.main_cli()
+    Lsutil.main_cli()

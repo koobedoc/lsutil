@@ -20,7 +20,6 @@ The package is available on `pypi.org`. Install the package by
 
     pip install lsutil
 
-
 ## Command line
 
 The command `lsutil` is available as a script.
@@ -28,10 +27,11 @@ The command `lsutil` is available as a script.
 
 ## Python module
 
+``` python
+import lsutil
 
-    import lsutil
-
-    lsutil.ls()
+lsutil.ls()
+```
 
 ## Developments
 

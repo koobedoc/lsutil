@@ -26,7 +26,7 @@ build-pkg:
 	@bin/dev/update_version.py src/lsutil/__init__.py
 	@rm -rf dist/*
 	@python3 -m build
-	@ls -l dist
+	@ls -hl dist
 
 build: build-docs build-pkg
 
