@@ -31,14 +31,15 @@ class Lsutil:  # pylint: disable = invalid-name
             one = True
 
         if not formats:
-            formats = "{size:10d} {entry.name}{classify}"
+            formats = "{entry.name}{classify}  "
             if longs:
-                formats = "{filemode} " + formats
+                formats = "{filemode} {size:8}  {entry.name}{classify}"
 
         for name in pathnames:
+            files = []
             with os.scandir(name) as it:
                 for entry in it:
-                    if entry.is_file():
+                    if not classify or entry.is_file():
                         classify = ""
                     elif entry.is_dir():
                         classify = "/"
@@ -48,7 +49,6 @@ class Lsutil:  # pylint: disable = invalid-name
                         classify = "?"
 
                     fstat = entry.stat()
-
 
                     print(
                         formats.format(size=fstat.st_size, classify=classify, filemode=stat.filemode(fstat.st_mode), entry=entry),
