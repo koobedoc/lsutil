@@ -22,8 +22,12 @@
 
 `--tree`:
 
-
 : show entries in a tree form.
+
+
+`--no-rcs`:
+
+: ignore entries per revision control system.
 
 
 
@@ -63,12 +67,6 @@ The resource specifiers, which are a superset of those recognized by the tcsh(1)
       C      Name and command line arguments of the command being timed.
       D      Average size of the process's unshared data area, in Kilobytes.
       E      Elapsed real (wall clock) time used by the process, in [hours:]minutes:seconds.
-      F      Number of major, or I/O-requiring, page faults that occurred while the process was running.  These
-             are faults where the page has actually migrated out of primary memory.
-      I      Number of file system inputs by the process.
-      K      Average total (data+stack+text) memory use of the process, in Kilobytes.
-      M      Maximum resident set size of the process during its lifetime, in Kilobytes.
-      O      Number of file system outputs by the process.
       P      Percentage of the CPU that this job got.  This is just user + system times divided by the total
              running time.  It also prints a percentage sign.
 
