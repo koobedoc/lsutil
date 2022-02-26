@@ -15,7 +15,6 @@ with perhaps better performance and ease of use. Some unique functionalities are
 
 - ignore files
 
-
 ## Installation
 
 The package is available on `pypi.org`. Install the package by
