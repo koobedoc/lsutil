@@ -36,5 +36,6 @@ lsutil.ls()
 
 ## Developments
 
-*Source Code*:  [https://github.com/koobedoc/lsutil](https://github.com/koobedoc/lsutil)
+- Source code on github:  [https://github.com/koobedoc/lsutil](https://github.com/koobedoc/lsutil)
+- Package on PyPI: [https://pypi.org/search/?q=lsutil](https://pypi.org/search/?q=lsutil)
 
