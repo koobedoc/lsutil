@@ -4,9 +4,11 @@
 | Feature            | ls           | tree | find | lsutil  |
 | ------------------ | ------------ | ---- | ---- | ------- |
 | **Output**         |              |      |      |         |
-| HTML Output        | -            | Yes  | -    | Planned   |
-| JSON Output        | -            | -    | -    | Planned   |
+| HTML Output        | -            | Yes  | -    | Planned |
+| XML  Output        | -            | Yes  | -    | Planned |
+| JSON Output        | -            | -    | -    | Planned |
 | Tree output        | -            | Yes  | -    | planned |
+| Collapse           | -            | -    | -    | planned |
 | Format string      | -            | date<br>only | Yes  | planned |
 | **Traversal**      |              |      |      |         |
 | Depth/Breath first | -            | -    | Yes  | planned |
@@ -20,7 +22,8 @@
 | Size filter        | -            | -    | Yes  | planned |
 | Exclude RCS files  | -            | -    | -    | planned |
 | **Action**         |              |      |      |         |
-| Action             | -            | -    | Yes  | -       |
+| Exec               | -            | -    | Yes  | No      |
+| Delete             | -            | -    | Yes  | No      |
 
 
 

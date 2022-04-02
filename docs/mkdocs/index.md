@@ -1,6 +1,8 @@
 # Introduction
 
-Unix `ls`, `find`, and `tree` commands combined into a Python module.
+The `lsuitl` package combines Unix `ls`, `find`, and `tree` into a Python module and a
+command.
+
 
 !!! warning
 

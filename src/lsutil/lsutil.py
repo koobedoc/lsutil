@@ -4,7 +4,7 @@
 import stat
 import argparse
 import os
-import humanize
+
 
 class Lsutil:  # pylint: disable = invalid-name
     """Unix ls command in Python"""
@@ -51,7 +51,9 @@ class Lsutil:  # pylint: disable = invalid-name
                     fstat = entry.stat()
 
                     print(
-                        formats.format(size=fstat.st_size, classify=classify, filemode=stat.filemode(fstat.st_mode), entry=entry),
+                        formats.format(
+                            size=fstat.st_size, classify=classify, filemode=stat.filemode(fstat.st_mode), entry=entry
+                        ),
                         end="",
                     )
                     if one:
@@ -67,9 +69,9 @@ class Lsutil:  # pylint: disable = invalid-name
         parser.add_argument("-v", "--verbose", action="count", default=0, help="increase verbosity for debugging")
         parser.add_argument("-1", "--one", action="count", default=0, help="increase verbosity for debugging")
         parser.add_argument("--formats", type=str, help="Format string")
-        parser.add_argument("--stdin", action='store_true', help="accept file arguments from input")
-        parser.add_argument("--humanize", action='store_true', help="humanize output")
-        parser.add_argument("--man", action='store_true', help="display man page")
+        parser.add_argument("--stdin", action="store_true", help="accept file arguments from input")
+        parser.add_argument("--humanize", action="store_true", help="humanize output")
+        parser.add_argument("--man", action="store_true", help="display man page")
 
         self.args = parser.parse_args()
         if self.args.verbose:
