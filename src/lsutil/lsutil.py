@@ -78,8 +78,8 @@ class Lsutil:  # pylint: disable = invalid-name
             # print(f"lsutil ver. {__init__.__version__}, {__init__.__built__}")
             print(self.args)
 
-    @staticmethod
-    def main_cli():
+
+def cli():
         """Unix command line interface"""
         self = Lsutil()
         self.parse_cli()
@@ -88,4 +88,4 @@ class Lsutil:  # pylint: disable = invalid-name
 
 if __name__ == "__main__":
 
-    Lsutil.main_cli()
+    cli()
